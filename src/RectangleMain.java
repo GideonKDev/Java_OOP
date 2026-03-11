@@ -9,8 +9,11 @@ public class RectangleMain {
             double wid = input.nextDouble();
 
         Rectangle r = new Rectangle(len,wid);
-        System.out.println("Area: "+r.getArea());
-        System.out.println("Perimeter: "+r.getPerimeter());
+
+        System.out.println(r.getLength()+" * "+r.getWidth()+" = "+ r.getArea());
+        System.out.println(r.getLength()+" + "+r.getWidth()+" + "+r.getLength()+" + "+r.getWidth()+" = "+ r.getPerimeter());
+        // System.out.println("Area: "+r.getArea());
+        // System.out.println("Perimeter: "+r.getPerimeter());
         }
 
     }
