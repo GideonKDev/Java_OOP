@@ -1,8 +1,7 @@
 {
     "java.project.sourcePaths": [
         "src",
-        "problems",
-        
+        "problems"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
