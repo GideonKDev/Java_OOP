@@ -31,8 +31,7 @@ Write a main program that:
 3.	If the password is "Weak", prompt the user to try again (maximum 3 attempts)
 4.	After successful validation or maximum attempts, generate and display a strong password suggestion using the generator method
 */
-import java.util.Scanner;
-import java.util.Randomn;
+import java.util.Random;
 public class PasswordGenerator {
     public PasswordGenerator(){
 
@@ -71,7 +70,26 @@ public class PasswordGenerator {
         }
 
     }
-    public void generatePassword(int length, boolean useSpecialChars){
+    public static String generatePassword(int length, boolean useSpecialChars){
+        String upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String lower = "abcdefghijklmnopqrstuvwxyz";
+        String digits = "0123456789";
+        String special = "!@#$%^&*";
+
+        String allChars = upper+lower+digits;
+        if(useSpecialChars){
+            allChars = allChars + special; 
+        }
+
+        Random rand = new Random();
+        String password = " ";
+
+        for (int i = 0; i<=length; i++){
+            int index = rand.nextInt(allChars.length());
+            password = password + allChars.charAt(index);
+        }
+
+        return password;
 
     }
 
