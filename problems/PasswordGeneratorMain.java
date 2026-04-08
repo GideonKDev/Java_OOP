@@ -26,6 +26,7 @@ public class PasswordGeneratorMain {
             break;
         }
         attempts++;
+        
         if(attempts<3){
             System.out.println("Password is weak.. Try again");
         }
@@ -39,6 +40,8 @@ public class PasswordGeneratorMain {
     String newPass = PasswordGenerator.generatePassword(8, true);
     System.out.println("Suggested Password: " + newPass);
     }
+
+    
     
     input.close();
 

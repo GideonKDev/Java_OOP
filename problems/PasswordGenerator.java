@@ -89,6 +89,8 @@ public class PasswordGenerator {
             password = password + allChars.charAt(index);
         }
 
+        
+
         return password;
 
     }
