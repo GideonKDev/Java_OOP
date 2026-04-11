@@ -33,6 +33,7 @@ public class PasswordGeneratorMain {
       }
     if (passVerified.equals("Weak")) {
         System.out.println("\nMaximum attempts reached.");
+        
     }
     
     if(attempts == 3){
