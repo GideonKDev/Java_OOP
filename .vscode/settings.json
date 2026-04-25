@@ -2,7 +2,8 @@
     "java.project.sourcePaths": [
         "src",
         "problems",
-        "Lectures"
+        "Lectures",
+        "tutorials"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [

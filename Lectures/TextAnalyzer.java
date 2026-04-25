@@ -1,3 +1,8 @@
+import java.util.HashMap;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+
 public class TextAnalyzer {
     public static int countWord(String text){
         //Returns the number of words in the text 
@@ -79,7 +84,32 @@ public class TextAnalyzer {
     }
 
     public static void wordFrequency(String text){
-        //split the texts into words(ignoring punctuations)
+        //         Part B: Word Frequency Analysis
+        // Create a method wordFrequency(String text) that:
+        // •	Splits the text into words (ignoring punctuation)
+        // •	Converts all words to lowercase for case-insensitive counting
+        // •	Returns a HashMap<String, Integer> mapping each word to its frequency
+        // •	Displays the top 5 most frequent words
+
+        String[] words = text.split("\\W+");
+        words = words.toLowerCase();
+        HashMap<String, Integer> frequencyMap = new HashMap<>();
+        for (String word : words){
+            if (frequencyMap.containsKey(word)){
+                frequencyMap.put(word, frequencyMap.get(word)+1);
+            } else {
+                frequencyMap.put(word, 1);
+            }
+        }
+        List<Map.Entry<String, Integer>> sortedEntries = new ArrayList<>(frequencyMap.entrySet());
+        sortedEntries.sort((e1, e2) -> e2.getValue().compareTo(e1.getValue()));
+        System.out.println("Top 5 most frequent words:");
+        for (int i = 0; i < Math.min(5, sortedEntries.size()); i++){
+            Map.Entry<String, Integer> entry = sortedEntries.get(i);
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+
+
         
     }
     

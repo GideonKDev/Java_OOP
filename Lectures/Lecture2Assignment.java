@@ -31,7 +31,6 @@ Write a main program that:
 4.	Continues until the user chooses to exit
 
 */
-
 public class Lecture2Assignment {
     public static void main(String[] args){
        // Scanner input = new Scanner(System.in);
@@ -49,6 +48,8 @@ public class Lecture2Assignment {
         
         int num5 = TextAnalyzer.countConsonants(Text);
         System.out.println("Consonants: "+num5);
+
+       TextAnalyzer.wordFrequency("Master Master, where's my Master? Master, Master, where's my Master?");
 
     }
     
