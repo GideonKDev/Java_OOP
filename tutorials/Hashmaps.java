@@ -5,9 +5,14 @@ public class Hashmaps {
     public static void main(String[] args){
 
         HashMap<String, String> cities = new HashMap<String, String>();
-        cities.put("Kenya","Nairobi");
-        cities.put("Rwanda","Kigali");
-
-        System.out.println(cities);
+        Scanner input = new Scanner(System.in);
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Enter Country "+(i+1)+": ");    
+            String country = input.nextLine();
+            System.out.print("Enter Capital of "+country+": ");
+            String capital = input.nextLine();
+            cities.put(country, capital);
+        }
+        
     }
 }
