@@ -31,28 +31,50 @@ Write a main program that:
 4.	Continues until the user chooses to exit
 
 */
+import java.util.*;
 public class Lecture2Assignment {
     public static void main(String[] args){
-       // Scanner input = new Scanner(System.in);
-        // String Text = "Hello World. Yes Master";
-        // int num =  TextAnalyzer.countWord(Text);
-        // System.out.println("Words: "+num);
-        // int num2 = TextAnalyzer.countSentences(Text);
-        // System.out.println("Sentences: "+num2);
 
-        // int num3 = TextAnalyzer.countCharacters(Text);
-        // System.out.println("Characters: "+num3);
+        Scanner input = new Scanner(System.in);
+        System.out.println("Welcome to Kirui texts analyzer");
+        System.out.print("Enter text: ");
+        String text = input.nextLine();
 
-        // int num4 = TextAnalyzer.countVowels(Text);
-        // System.out.println("Vowels: "+num4);
-        
-        // int num5 = TextAnalyzer.countConsonants(Text);
-        // System.out.println("Consonants: "+num5);
+        System.out.println("Choose an analysis option:");
+        System.out.println("1. Basic Text Statistics");
+        System.out.println("2. Word Frequency Analysis");
+        System.out.println("3. Text Transformation");
+        System.out.println("4. Exit");
 
-    // TextAnalyzer.wordFrequency("Master Master, where's my Master? Master, Master, where's my Master?");
-    String master = TextAnalyzer.reverseWords("Master");
-    System.out.println("Master reversed: "+master);
+        int choice;
+        do {
+            System.out.print("Enter your choice: ");
+            choice = input.nextInt();
+            input.nextLine(); // Consume newline
 
+            switch (choice) {
+                case 1:
+                    System.out.println("Word Count: " + TextAnalyzer.countWord(text));
+                    System.out.println("Sentence Count: " + TextAnalyzer.countSentences(text));
+                    System.out.println("Character Count: " + TextAnalyzer.countCharacters(text));
+                    System.out.println("Vowel Count: " + TextAnalyzer.countVowels(text));
+                    System.out.println("Consonant Count: " + TextAnalyzer.countConsonants(text));
+                    break;
+                case 2:
+                    TextAnalyzer.wordFrequency(text);
+                    break;
+                case 3:
+                    System.out.println("Reversed Words: " + TextAnalyzer.reverseWords(text));
+                    System.out.println("Pig Latin: " + TextAnalyzer.toPigLatin(text));
+                    System.out.println("Removed Duplicates: " + TextAnalyzer.removeDuplicates(text));
+                    break;
+                case 4:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        } while (choice != 4);
     }
     
 }

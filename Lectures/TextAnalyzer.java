@@ -121,18 +121,15 @@ public class TextAnalyzer {
     }
 
     public static String toPigLatin(String text){
-        //converts each word to pig latin   
-        if (text == null || text.isEmpty()){
-            return null;
-        }
-        //split the sentence into words
-        String[] words = text.trim().split("\\s+");
-        StringBuilder result = new StringBuilder();
+        //code to convert a sentence to pig latin
+        
 
-        //convert each word individually
-    }
-    
+
 
     }
 
+    public static String removeDuplicates(String text){
+        //code to remove duplicated for a sentece
+    }
 
+}
