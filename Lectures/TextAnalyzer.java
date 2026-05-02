@@ -112,6 +112,25 @@ public class TextAnalyzer {
 
         
     }
+
+    public static String reverseWords(String text){
+        if (text == null || text.isEmpty()){
+            return null;
+        }
+        return new StringBuilder(text).reverse().toString();
+    }
+
+    public static String toPigLatin(String text){
+        //converts each word to pig latin   
+        if (text == null || text.isEmpty()){
+            return null;
+        }
+        //split the sentence into words
+        String[] words = text.trim().split("\\s+");
+        StringBuilder result = new StringBuilder();
+
+        //convert each word individually
+    }
     
 
     }

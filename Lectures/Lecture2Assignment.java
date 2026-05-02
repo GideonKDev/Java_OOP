@@ -34,22 +34,24 @@ Write a main program that:
 public class Lecture2Assignment {
     public static void main(String[] args){
        // Scanner input = new Scanner(System.in);
-        String Text = "Hello World. Yes Master";
-        int num =  TextAnalyzer.countWord(Text);
-        System.out.println("Words: "+num);
-        int num2 = TextAnalyzer.countSentences(Text);
-        System.out.println("Sentences: "+num2);
+        // String Text = "Hello World. Yes Master";
+        // int num =  TextAnalyzer.countWord(Text);
+        // System.out.println("Words: "+num);
+        // int num2 = TextAnalyzer.countSentences(Text);
+        // System.out.println("Sentences: "+num2);
 
-        int num3 = TextAnalyzer.countCharacters(Text);
-        System.out.println("Characters: "+num3);
+        // int num3 = TextAnalyzer.countCharacters(Text);
+        // System.out.println("Characters: "+num3);
 
-        int num4 = TextAnalyzer.countVowels(Text);
-        System.out.println("Vowels: "+num4);
+        // int num4 = TextAnalyzer.countVowels(Text);
+        // System.out.println("Vowels: "+num4);
         
-        int num5 = TextAnalyzer.countConsonants(Text);
-        System.out.println("Consonants: "+num5);
+        // int num5 = TextAnalyzer.countConsonants(Text);
+        // System.out.println("Consonants: "+num5);
 
-       TextAnalyzer.wordFrequency("Master Master, where's my Master? Master, Master, where's my Master?");
+    // TextAnalyzer.wordFrequency("Master Master, where's my Master? Master, Master, where's my Master?");
+    String master = TextAnalyzer.reverseWords("Master");
+    System.out.println("Master reversed: "+master);
 
     }
     
