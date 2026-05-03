@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
@@ -156,9 +157,22 @@ public class TextAnalyzer {
 
     public static String removeDuplicates(String text){
         //code to remove duplicated words from a sentence
+        if (text == null || text.isEmpty()){
+            return null;
+        }   
         
+        String[] words = text.split("\\s+");
+        StringBuilder result = new StringBuilder();
+        HashSet<String> seen = new HashSet<>();
 
-        return null;
+        for (String m: words){
+            if (!seen.contains(m.toLowerCase())) {
+            seen.add(m.toLowerCase());
+            result.append(m).append(" ");
+        }
+        }
+
+        return result.toString();
     }
 
 }
