@@ -27,8 +27,26 @@ public class PigLatin {
     //otherwise.. move leading constants to the end and ad "ay"
    }
 
+   public static String sentenceToPigLatin(String sentence){
+    if (sentence == null || sentence.isEmpty()){
+        return null;
+    }
+
+    String[] words = sentence.split(" ");
+    StringBuilder result = new StringBuilder();
+
+    for(String w: words){
+        result.append(toPigLatin(w)).append(" ");
+    }
+
+    return result.toString().trim();
+   }
+
    public static void main(String[] args) {
        String ans=PigLatin.toPigLatin("rhythm");
        System.out.println(ans);
+
+       String ans2= sentenceToPigLatin("Master apple will come home soon");
+       System.out.println(ans2);
    }
 }
