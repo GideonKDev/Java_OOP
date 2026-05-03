@@ -120,18 +120,43 @@ public class TextAnalyzer {
         return new StringBuilder(text).reverse().toString();
     }
 
-    public static String toPigLatin(String text){
+    public static String toPigLatinWord(String word){
         //code to convert a sentence to pig latin
-        
+        if (word == null || word.isEmpty()){
+            return null;
+        }
+        word = word.toLowerCase();
+        char c = word.charAt(0);
 
+    //if the text starts with a vowel
+         if (c == 'a' || c == 'e' ||c == 'i' || c == 'o' ||c == 'u' ){
+            return word + "way";
+         }else{
+        return word.substring(1)+c+"ay";
+    }
+    //otherwise.. move leading constants to the en
 
-        return null;
+    }
 
+    public static String toPigLatin(String text){
+        if (text== null || text.isEmpty()){
+            return null;
+
+        }
+
+        String[] words = text.split(" ");
+        StringBuilder result = new StringBuilder();
+
+        for (String w: words){
+            result.append(TextAnalyzer.toPigLatinWord(w)).append(" ");
+        }
+
+        return result.toString();
     }
 
     public static String removeDuplicates(String text){
         //code to remove duplicated words from a sentence
-
+        
 
         return null;
     }
