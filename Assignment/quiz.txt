@@ -1,0 +1,70 @@
+Java Collections Framework Exercise 1: Student Management System
+
+## Objective
+Practice using `ArrayList`, `HashSet`, `HashMap`, and `TreeMap` together in a realistic application.
+
+## Problem Description
+A university wants to manage student enrollments. You need to implement a system that:
+1. Maintains a master list of all students (using `ArrayList<Student>`)
+2. Tracks unique course codes (using `HashSet<String>`)
+3. Stores student grades by student ID (using `HashMap<Integer, ArrayList<Integer>>`)
+4. Produces sorted reports (using `TreeMap`)
+
+## Requirements
+### Student Class
+Create a `Student` class with:
+- `id` (int)
+- `name` (String)
+- `email` (String)
+
+### Functional Requirements
+Implement methods to:
+- **Add new students**: No duplicate IDs[cite: 62].
+- **Enroll students in courses**: Maintain a `HashMap<Integer, HashSet<String>>` mapping student ID → set of course codes[cite: 63, 64].
+- **Record grades**: For a student in a specific course[cite: 65].
+- **Generate reports**: All students sorted by name using `TreeMap`[cite: 66].
+- **Search**: Find all students enrolled in a specific course[cite: 67].
+- **Calculate**: Average grade for each student[cite: 68].
+
+## Sample Input/Output
+```text
+--- Student Management System ---
+1. Add Student
+2. Enroll Student in Course
+3. Record Grade
+4. Generate Sorted Student Report
+5. Find Students by Course
+6. Calculate Student Averages
+7. Exit
+
+> 1
+Enter student ID: 101
+Enter student name: Alice Johnson
+Enter student email: alice@university.com
+Student added successfully.
+
+> 1
+Enter student ID: 102
+Enter student name: Bob Smith
+Enter student email: bob@university.com
+Student added successfully.
+
+> 2
+Enter student ID: 101
+Enter course code: CS101
+Student 101 enrolled in CS101
+
+> 3
+Enter student ID: 101
+Enter course code: CS101
+Enter grade: 88
+Grade recorded.
+
+> 5
+Enter course code: CS101
+Students in CS101: [Alice Johnson]
+
+> 6
+Student Averages:
+Alice Johnson: 88.00
+Bob Smith: No grades recorded
