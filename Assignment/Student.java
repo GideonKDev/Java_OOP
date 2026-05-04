@@ -1,5 +1,6 @@
 /**
  * @author Master Kirui
+ * 
  */
 
 package Java_OOP.Assignment;
@@ -10,6 +11,7 @@ public class Student {
     private String mail;
 
     public void addStudent(){
+        //no duplicate IDs
 
     }
 
