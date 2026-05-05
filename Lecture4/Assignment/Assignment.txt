@@ -1,0 +1,3 @@
+create a programme that is able to calculate area and perimeter of different polygons and 
+use Circle Rectangle and triangle to demonstrate each scenario. For each polygon, the user should be 
+prompted to key in the required dimensions in order for the polygon to be complete and area and perimeter to be computed
