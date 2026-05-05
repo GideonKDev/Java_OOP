@@ -1,0 +1,6 @@
+This folder contains OOP Pillars:
+Inheritance and Polymorphism
+
+Keywords:
+    Extends
+    Super
