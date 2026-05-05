@@ -25,4 +25,13 @@ class Student extends Person{
    public Double getFeeBal(){
     return feebalance;
    }
+
+  @Override
+   public void displayDetails(){
+    System.out.println("================Student=================");
+    super.displayDetails();
+    System.out.println("Registration Number: "+getReg());
+    System.out.println("Fee balance: "+getFeeBal());
+   }
+ 
 }

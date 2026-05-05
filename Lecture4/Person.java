@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Person {
     protected String name;
-    private String gender;
+    protected String gender;
     protected static Scanner input = new Scanner(System.in);
 
 
@@ -28,4 +28,9 @@ public class Person {
     public String getGender(){
         return gender;
     }
+    
+    public void displayDetails(){
+    System.out.println("Name: "+name);
+    System.out.println("Gender: "+gender);
+   }
 }
