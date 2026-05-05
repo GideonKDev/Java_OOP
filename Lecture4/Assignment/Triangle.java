@@ -1,6 +1,6 @@
 package Java_OOP.Lecture4.Assignment;
 class Triangle extends Rectangle {
-       
+       //right angled triangle only for perimeter
     public Triangle(double length, double width){
     super(length,width);
     }
