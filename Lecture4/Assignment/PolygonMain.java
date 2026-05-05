@@ -6,8 +6,7 @@ public class PolygonMain {
         Scanner input = new Scanner(System.in);
         System.out.println("Welcome to System Polygon Calculator");
         System.out.println("1. Triangle\n2. Rectangle\n3. Circle ");
-
-        int choice;
+        int choice = input.nextInt();
 
         switch (choice) {
             case 1:
@@ -25,9 +24,37 @@ public class PolygonMain {
                 System.out.println("Area: "+area +"\nPerimeter: "+per);
                 
                 break;
+
+            case 2:
+                System.out.println("=======Rectangle Dimensions========");
+                System.out.print("Length: ");
+                double length = input.nextDouble();
+                System.out.print("Width: ");
+                double width = input.nextDouble();
+                Polygon r = new Rectangle(length, width);
+                double areaR = r.area();
+                double perR = r.perimeter();
+                System.out.println("========Results============");
+                System.out.println("Area: "+areaR +"\nPerimeter: "+perR );
+                break;
+
+            case 3:
+                System.out.println("=======Circle Dimensions========");
+                System.out.print("Radius: ");
+                double radius = input.nextDouble(); 
+                Polygon c = new Circle(radius);
+                double areaC = c.area();
+                double perC = c.perimeter();
+                System.out.println("========Results============");
+                System.out.println("Area: "+areaC +"\nPerimeter: "+perC );
+                break;
             default:
-                throw new AssertionError();
+                System.out.println("Invalid choice. Please select 1, 2, or 3.");
+                break;
+                       
         }
+        input.close();
     }
+
     
 }
