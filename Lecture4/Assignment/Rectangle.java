@@ -1,7 +1,7 @@
 package Java_OOP.Lecture4.Assignment;
 class Rectangle extends Polygon {
-    private double length;
-    private double width;
+    protected double length;
+    protected double width;
 
     public Rectangle(double length, double width) {
         this.length = length;
