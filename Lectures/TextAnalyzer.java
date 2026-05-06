@@ -172,7 +172,7 @@ public class TextAnalyzer {
         }
         }
 
-        return result.toString();
+        return result.toString().trim();
     }
 
 }

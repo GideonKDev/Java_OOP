@@ -40,6 +40,7 @@ public class PigLatin {
     }
 
     return result.toString().trim();
+    //.trim() is used to remove the trailing space at the end of the result string
    }
 
    public static void main(String[] args) {
