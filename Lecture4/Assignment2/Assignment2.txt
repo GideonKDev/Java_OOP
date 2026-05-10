@@ -1,0 +1,111 @@
+QUIZ: Employee Payment System with Inheritance & Overriding (Java)
+
+BACKGROUND:
+
+A company has two types of employees:
+1. Casual Employee – Paid based on commission per day worked.
+2. Permanent Employee – Paid a fixed monthly salary.
+
+You are to model this system using Object-Oriented Programming in Java, applying inheritance, method overriding, and polymorphism (virtual methods).
+
+---
+
+CORE REQUIREMENTS:
+
+1. CLASS DESIGN:
+
+Create an abstract or base class named Employee with:
+- Private attributes: name (String), employeeNumber (String or int)
+- A constructor to initialize both
+- Getters for both attributes
+- An abstract method calculatePay() that returns a double
+- Override toString() to return employee details in readable format
+
+2. SUBCLASSES:
+
+CasualEmployee:
+- Additional attributes: daysWorked (int), commissionPerDay (double)
+- Implement calculatePay() as daysWorked * commissionPerDay
+
+PermanentEmployee:
+- Additional attribute: monthlySalary (double)
+- Implement calculatePay() to return monthlySalary
+
+3. POLYMORPHISM & OVERRIDING:
+
+- calculatePay() must be overridden in each subclass
+- In main program, store Employee references but instantiate specific subclass objects to demonstrate runtime polymorphism
+
+4. STORAGE REQUIREMENT:
+
+Store all employees in a Map where:
+- Key = employee number (String or Integer)
+- Value = Employee object (Casual or Permanent)
+- Use an appropriate Map implementation (e.g., HashMap)
+
+5. OPERATIONS TO IMPLEMENT:
+
+Your program must allow:
+- Add an employee (ask for type, then details)
+- Find and display an employee's pay by entering employee number
+- Display all employees with their calculated pay
+- (Optional but recommended) Remove an employee by number
+
+---
+
+BONUS CHALLENGES (Optional but adds interest):
+
+- Validation: Ensure employee numbers are unique when adding to the map
+- Menu-driven console interface:
+  1. Add Casual Employee
+  2. Add Permanent Employee
+  3. Show Pay by Employee Number
+  4. Show All Employees
+  5. Remove Employee
+  6. Exit
+- Input handling: Prevent negative days or salaries
+- Apply a raise method: Add applyRaise(double percentage) to Employee that is overridden differently – permanent increases salary, casual increases commission per day
+
+---
+
+SAMPLE PROGRAM INTERACTION:
+
+1. Add Casual Employee
+2. Add Permanent Employee
+3. Calculate Pay by Employee Number
+4. Show All Employees
+5. Exit
+
+Choice: 1
+Enter name: John
+Enter employee number: C101
+Enter days worked: 20
+Enter commission per day: 150
+Casual employee added.
+
+Choice: 3
+Enter employee number: C101
+Pay for John (C101): 3000.0
+
+---
+
+KEY OOP CONCEPTS TO DEMONSTRATE:
+
+- Inheritance (extends)
+- Method overriding (@Override)
+- Abstract methods
+- Base class reference pointing to subclass objects
+- Polymorphic method calls (Java virtual method invocation)
+- Encapsulation (private fields, public getters)
+- Map interface for data storage
+
+---
+
+WHAT TO SUBMIT:
+
+- Complete Java code with all classes (Employee, CasualEmployee, PermanentEmployee, Main)
+- Code must compile and run
+- Demonstrate all required operations
+- Add comments explaining inheritance and overriding
+
+END OF QUIZ
