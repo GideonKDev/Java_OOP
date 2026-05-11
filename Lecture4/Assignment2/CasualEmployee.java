@@ -15,5 +15,6 @@ public class CasualEmployee extends Employee {
     @Override
     public void displayDetails(){
         
+        
     }
 }
