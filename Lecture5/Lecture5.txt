@@ -1,0 +1,27 @@
+this is a class diagram for lecture 5 of Java OOP. It includes the following classes:
+      -Account :Abstract class
+        -#AccountNumber :int;
+        -#Balance :double;
+        -#AccountHolder :String;
+
+        +Account()
+        +Deposit()
+        +checkBalance()
+        +withdraw() Abstact Method
+
+        
+
+      -StudentAccount :Account
+        -#StudentID :String;
+
+        +StudentAccount()
+        +checkStudentID()
+        +withdraw()
+
+      -SalaryAccount :Account
+        -#EmployerName :String;
+
+        +SalaryAccount()
+        +checkEmployerName()
+        +withdraw()
+        +setMinimumBalance()
