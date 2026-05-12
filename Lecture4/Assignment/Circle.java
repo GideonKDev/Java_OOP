@@ -2,9 +2,9 @@ package Java_OOP.Lecture4.Assignment;
 class Circle extends Polygon {
     private double radius;
 
-    public Circle() {
-        this.radius = 0;
-    }
+    // public Circle() {
+    //     this.radius = 0;
+    // }
 
     public Circle(double radius) {
         this.radius = radius;

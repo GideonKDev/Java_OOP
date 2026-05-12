@@ -1,6 +1,6 @@
 package Java_OOP.Lecture4.Assignment;
 
-public class Polygon {
+abstract class Polygon {
     public double area(){
         return 0;
     }
