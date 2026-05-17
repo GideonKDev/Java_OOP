@@ -2,7 +2,6 @@ package Java_OOP.tutorials;
 import java.util.*;
 
 public class Hashmaps2 {
-    // Import the HashMap class
 
   public static void main(String[] args) {
 
