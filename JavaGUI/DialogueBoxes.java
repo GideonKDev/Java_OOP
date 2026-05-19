@@ -15,8 +15,14 @@ public class DialogueBoxes {
         int age = currentYear - year;
         JOptionPane.showMessageDialog(null,"Age: "+age);
 
-        //Developing a dropDown
-        
+        //Developing a dropDown for the country
+        Object[] countries = {"Kenya", "Uganda","Tanzania", "Somalia","South Africa"};
+        String country = (String) JOptionPane.showInputDialog(null, "Select Country:", "Country Selection", JOptionPane.PLAIN_MESSAGE, null, countries, countries[0]);
 
+        //confirm dialogue
+        int feedback = JOptionPane.showConfirmDialog(null, "Are you sure you want to terminate ?");
+            if (feedback == 0){
+                System.exit(0);
+            }
     }
 }
