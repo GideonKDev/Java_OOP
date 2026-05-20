@@ -11,11 +11,11 @@ import java.util.HashSet;
 public class NoSuchElementExeption_Demo {
     public static void main(String[] args) {
         Set<String> exampleSet = new HashSet<>();
-        Hashtable<Integer, String> exampleTable = new Hashtable<>();
+        Hashtable<Integer, String> exampleTable = new Hashtable<Integer, String >();
 
-        // add elements so calling next() / nextElement() won't throw NoSuchElementException
-        // exampleSet.add("one");
-        // exampleTable.put(1, "one");
+        //add elements so calling next() / nextElement() //won't throw NoSuchElementException
+        exampleSet.add("one");
+        exampleTable.put(1, "one");
 
         System.out.println(exampleSet.iterator().next());
         System.out.println(exampleTable.elements().nextElement());

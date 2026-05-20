@@ -17,12 +17,20 @@ public class HashMap3 {
 
             users.put(name, Id);
         }    
-
+        //search by Name
         System.out.println("Check ID number for a specific name");
         System.out.println("Enter name: ");
+
         String checkName = input.nextLine();
 
-        int answer = users.get(checkName);
-        System.out.println(answer);
+        try {
+            Integer answer = users.get(checkName);
+            if (answer == null) {
+                throw new NoSuchElementException("Name not found: " + checkName);
+            }
+            System.out.println(answer);
+        } catch (NoSuchElementException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

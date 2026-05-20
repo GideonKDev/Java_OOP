@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Arraylist {
+    //An arraylist: a resizable array that maintains order and allows duplication
     public static void arrayListInt(){
         ArrayList<Integer> myNumbers = new ArrayList<Integer>();
         Scanner input = new Scanner(System.in);
@@ -27,11 +28,11 @@ public class Arraylist {
 
         for(int i=0; i<10;i++ ){
             System.out.print("Enter Brand "+(i+1)+":");
-        String veh = input.nextLine();
+            String veh = input.nextLine();
 
             cars.add(veh);
         }
-        Collections.sort(cars);
+        Collections.sort(cars);//sorts the vehicles in Alphabetical order
         System.out.println(cars);
        
 
