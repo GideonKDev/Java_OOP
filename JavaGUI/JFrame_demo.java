@@ -1,45 +1,56 @@
 package Java_OOP.JavaGUI;
 
-import java.awt.FlowLayout;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
+import java.awt.*;
+import javax.swing.*;
 
 public class JFrame_demo extends JFrame {
-    JLabel lblHeading,lblUsername, lblPassword;
-    JButton btnLogin, btnCancel;
 
-    JTextField txtUsername = new JTextField(20);
-    JPasswordField pwtPassword = new JPasswordField(20);
+    private JLabel lblHeading, lblUsername, lblPassword;
+    private JButton btnLogin, btnCancel;
+    private JTextField txtUsername;
+    private JPasswordField pwtPassword;
 
-    public void sample(){
-        //super("Login Form");
-        lblHeading  = new JLabel("Students System");
-        lblUsername = new JLabel("Username: ");
-        lblPassword = new JLabel("Password: ");
+    public JFrame_demo() {
+        setTitle("Login Form");
+        setSize(400, 250);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null); // center the window
+        setLayout(new BorderLayout());
+
+        // Heading
+        lblHeading = new JLabel("Students System", SwingConstants.CENTER);
+        lblHeading.setFont(new Font("Arial", Font.BOLD, 20));
+        add(lblHeading, BorderLayout.NORTH);
+
+        // Form panel
+        JPanel formPanel = new JPanel(new GridLayout(2, 2, 10, 10));
+        lblUsername = new JLabel("Username:");
+        lblPassword = new JLabel("Password:");
+
+        txtUsername = new JTextField(20);
+        pwtPassword = new JPasswordField(20);
+
+        formPanel.add(lblUsername);
+        formPanel.add(txtUsername);
+        formPanel.add(lblPassword);
+        formPanel.add(pwtPassword);
+
+        add(formPanel, BorderLayout.CENTER);
+
+        // Buttons panel
+        JPanel buttonPanel = new JPanel();
         btnLogin = new JButton("Login");
         btnCancel = new JButton("Cancel");
 
+        buttonPanel.add(btnLogin);
+        buttonPanel.add(btnCancel);
+
+        add(buttonPanel, BorderLayout.SOUTH);
+
         setVisible(true);
-        setSize(400, 300);
-        setLayout(new FlowLayout());
-
-        //displaying the interfaces
-        add(lblHeading);
-        add(lblUsername);
-        add(txtUsername);
-        add(lblPassword);
-        add(pwtPassword);
-        add(btnLogin);
-        add(btnCancel);
-
     }
 
     public static void main(String[] args) {
-        JFrame_demo frame = new JFrame_demo();
-        frame.sample();
+        new JFrame_demo();
     }
-
 }
