@@ -1,0 +1,7 @@
+CLICK EVENT Handling
+======================
+Event: Click
+Interface: Action Listener
+Methods: actionPerformed(ActionEvent)
+Package: java.awt.event 
+

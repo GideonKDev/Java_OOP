@@ -38,7 +38,8 @@ public class GUI_demo1 {
                 ageGroup[2]
             );
         
-        Object[] options={"Rainy","Cloudy","Sunny"};//returns a number for the button clicked
+        Object[] options={"Rainy","Cloudy","Sunny"};
+        //returns a number for the button clicked. the numbers returned 
 
         int condition = JOptionPane.showOptionDialog(
                 null,
