@@ -3,4 +3,4 @@ as its instance variable. Use a default constructor to allow a user to populate 
 members using console input/output. Make use of another method called searchMember, in
 which a user keys in a name and the method checks out if the name is among the members in
 the list or not. Make use of yet another method called viewMembers that uses for each loop to
-output all members in the list. Instantiate the class and invoke the search and outpu
+output all members in the list. Instantiate the class and invoke the search and output
