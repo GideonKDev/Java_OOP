@@ -1,0 +1,25 @@
+Challenge 2: The Smart Home System (Focus: Composition & Interfaces)
+
+Context: A house has different devices. You control everything from a central remote. Devices can be turned on/off, but some devices have special features.
+
+Requirements:
+
+1. Create an interface Device with methods: void turnOn(), void turnOff(), and String getStatus().
+
+2. Implement the interface in Light:
+   - Has an int brightness (0-100).
+   - Method dim(int level) (specific to Light).
+
+3. Implement the interface in Thermostat:
+   - Has a double temperature.
+   - Method setTemp(double t) (specific to Thermostat).
+
+4. Create the SmartHome class (The "Composition" part):
+   - This class "has a" list of Device objects.
+   - Method void addDevice(Device d).
+   - Method void pressMasterOff(): Turns off every device in the list.
+   - Method void showAllStatuses(): Prints the status of every device.
+
+Logic Note: The SmartHome doesn't care what the device is (Light or Thermostat). It just calls turnOn(). However, in your main method, you should demonstrate accessing specific methods (like calling dim on a Light) by checking the object type.
+
+What you learn: How objects can "have" other objects (Composition vs. Inheritance) and how Interfaces allow unrelated objects (Light and Thermostat) to be treated uniformly.

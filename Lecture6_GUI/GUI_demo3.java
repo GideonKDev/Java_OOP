@@ -33,7 +33,7 @@ public class GUI_demo3 extends JFrame implements ActionListener{
         add(caption);  //named controll, can be referenced anywhere in the code
         
         //unamed components are not referenced anymore
-        add(new JTextField(20)); add(lblPass);add(pwfPass);add(btnExit);
+        add(new JTextField(20)); add(lblPass);add(pwfPass);//add(btnExit);
         add(new JButton("Login"));
             
         //adding the private button declared outside the function
